@@ -24,6 +24,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+ 
 
 }
 
@@ -112,6 +118,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 60px;
 }
 
 .menu{
@@ -411,4 +418,147 @@ body{
     display: flex;
     justify-content: center;
     color: white;
+}
+
+
+/* mobile layout */
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+
+  body {
+    background-color: #6d7272;
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    height: auto;
+  }
+
+  /* Hide items that cannot fit */
+  .addres,
+  .sign,
+  .order {
+    display: none;
+  }
+
+  .nvalogo {
+    width: 35%;
+  }
+
+  .cart {
+    font-size: 16px;
+  }
+
+  /* Search bar full width */
+  .search {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* SECTION BAR */
+  .section-bar {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .section-items {
+    flex-shrink: 0;
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+
+  /* HERO SECTION */
+  .hero-image {
+    height: 160px;
+    background-size: cover;
+  }
+
+  .hero-box-section,
+  .hero-box-section1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+    position: static;
+  }
+
+  .box-item-1,
+  .box-item-2,
+  .box-item-3,
+  .box-item-4,
+  .box-item-5,
+  .box-item-6 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .box1, .box2, .box3, .box4, .box5, .box6 {
+    margin: 0 auto;
+    position: static;
+  }
+
+  #see {
+    bottom: 0;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* FOOTER */
+  .footer-top-second {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .foter-thrid-box {
+    height: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ul-1-box,
+  .ul-2-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .last,
+  .last-line {
+    text-align: center;
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 400px) {
+
+  .cart p {
+    font-size: 14px;
+  }
+
+  .nvalogo {
+    width: 45%;
+  }
+
+  .section-items {
+    font-size: 12px;
+  }
 }
